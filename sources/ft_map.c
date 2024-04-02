@@ -6,7 +6,7 @@
 /*   By: rparodi <rparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 22:51:53 by rparodi           #+#    #+#             */
-/*   Updated: 2024/03/10 18:24:45 by rparodi          ###   ########.fr       */
+/*   Updated: 2024/03/31 16:41:24 by rparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	map_size(t_mlx *mlx)
 	prev_i = 0;
 	while (mlx->map[j] != NULL)
 	{
+		i = 0;
 		while (mlx->map[j][i] != '\0' )
 			i++;
 		if (mlx->map[j][i - 1] == '\n')

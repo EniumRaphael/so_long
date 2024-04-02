@@ -6,7 +6,7 @@
 /*   By: rparodi <rparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 17:27:10 by rparodi           #+#    #+#             */
-/*   Updated: 2024/03/10 18:23:31 by rparodi          ###   ########.fr       */
+/*   Updated: 2024/03/31 16:56:32 by rparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	flood_fill(char **map, int x, int y, const char *old_value)
 	{
 		if (ft_index_strchr(old_value, map[x][y]) == 0)
 			return ;
-		map[x][y] = '.';
+		map[x][y] -= 32;
 		flood_fill(map, x + 1, y, old_value);
 		flood_fill(map, x - 1, y, old_value);
 		flood_fill(map, x, y + 1, old_value);
@@ -30,14 +30,14 @@ void	flood_fill(char **map, int x, int y, const char *old_value)
 void	ft_access(char **map, t_mlx *mlx, size_t i, size_t j)
 {
 	size_t		k;
-	const char	old_value[4] = {'P', 'C', 'E', '0'};
+	const char	old_value[4] = {'P', 'C', '0'};
 
 	k = 0;
 	flood_fill(map, j, i, old_value);
 	while (map[k] != NULL)
 	{
 		if (ft_index_strchr(map[k], 'C') != 0 || \
-			ft_index_strchr(map[k], 'E') != 0)
+			ft_index_strchr(map[k], 'e') != 0)
 		{
 			ft_free_maps(map, NULL);
 			ft_exit(mlx, NULL, 1, "The map is not finishable !");
