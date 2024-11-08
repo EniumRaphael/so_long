@@ -6,7 +6,7 @@
 /*   By: rparodi <rparodi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:25:35 by rparodi           #+#    #+#             */
-/*   Updated: 2024/03/10 17:55:57 by rparodi          ###   ########.fr       */
+/*   Updated: 2024/11/08 11:41:39 by rparodi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,9 @@ void	display_map(t_mlx *mlx)
 	t_image	image;
 	size_t	i;
 	size_t	j;
-	size_t	k;
 
 	i = 0;
 	j = 0;
-	k = 0;
 	while (j < mlx->map_h && mlx->map[j])
 	{
 		while (i + 1 < mlx->map_l && mlx->map[j][i] != '\0'\

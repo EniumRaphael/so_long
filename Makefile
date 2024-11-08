@@ -6,7 +6,7 @@
 #    By: rparodi <rparodi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/12 11:05:05 by rparodi           #+#    #+#              #
-#    Updated: 2024/03/08 14:28:29 by rparodi          ###   ########.fr        #
+#    Updated: 2024/11/08 12:38:10 by rparodi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 # Variables
@@ -23,7 +23,7 @@ RM = rm -rf
 # Flags
 CFLAGS = -Werror -Wextra -Wall -Wno-unused-command-line-argument -g3 -MMD
 MINILIBX = make -C ./minilibx-linux/
-MLXFLAGS = -Lmlx_linux -L/usr/lib -lXext -lX11 -lm -lz
+MLXFLAGS = -L/opt/X11/lib -lX11 -lXext -lXrender -lXrandr -lXi
 
 # Sources
 LIB =	./libft/ft_printf.c \
